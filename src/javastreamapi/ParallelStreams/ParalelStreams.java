@@ -33,9 +33,10 @@ public class ParalelStreams {
 		// TODO Auto-generated method stub
 		System.out.println("normal streams");
 		list.stream().filter(i->i.getSalary()>=2500).forEach(e->System.out.println(e.getSalary()));
+		
 		System.out.println("parallel streams");
-	
 		list.parallelStream().filter(i->i.getSalary()>=2500).forEach(e->System.out.println(e.getSalary()));
+		
 		System.out.println("converting normal streams to parallel streams");
 		list.stream().parallel().filter(i->i.getSalary()>=2500).forEach(e->System.out.println(e.getSalary()));
 
